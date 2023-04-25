@@ -11,11 +11,11 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * main - Entry point
- *
- * Return: Always 0 (Error)
- */
-int main(void)
+  * print_alphabet - writes the alphabet
+  *
+  * Return nothing
+  */
+void print_alphabet(void)
 {
 	char letters[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
@@ -24,5 +24,14 @@ int main(void)
 		_putchar(letters[i]);
 	}
 	_putchar('\n');
+}
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Error)
+ */
+int main(void)
+{
+	print_alphabet();
 	return (0);
 }
