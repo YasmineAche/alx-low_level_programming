@@ -1,9 +1,7 @@
-/**
-  3  * _putchar - writes the character c to stdout
-  4  * @c: The character to print
-  5  *
-  6  * Return: On success 1.
-  7  * On error, -1 is returned, and errno is set appropriately.
-  8  */
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
 int _putchar(char c);
 void print_alphabet(void);
+#endif
