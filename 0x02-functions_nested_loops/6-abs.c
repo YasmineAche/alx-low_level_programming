@@ -2,6 +2,8 @@
 /**
   * _abs - writes the absulut value of a number
   *
+  * @n : argument variable
+  *
   * Return: abs(n)
   */
 int _abs(int n)
