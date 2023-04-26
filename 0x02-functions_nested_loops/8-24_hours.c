@@ -20,7 +20,7 @@ void jack_bauer(void)
 			{
 				for (m2 = 0; m2 < 10 && !flag; m2++)
 				{
-					if (h1 == 2 && h2 == 4 && m1 == 0 && m2 == 1)
+					if (h1 == 2 && h2 == 3 && m1 == 5 && m2 == 9)
 					{
 						flag = 1;
 					}
