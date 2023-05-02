@@ -22,7 +22,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		bigin = (len - 1) / 2;
+		bigin = (len + 1) / 2;
 	}
 	for (i = bigin; i < len; i++)
 	{
