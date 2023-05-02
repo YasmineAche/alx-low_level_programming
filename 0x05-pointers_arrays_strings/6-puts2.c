@@ -18,11 +18,11 @@ void puts2(char *str)
 	str -= len;
 	if (len % 2 == 0)
 	{
-		len = len / 2 + 1;
+		len = len / 2;
 	}
 	else
 	{
-		len = len / 2;
+		len = len / 2 + 1;
 	}
 	for (i = 0; i < len; i++)
 	{
