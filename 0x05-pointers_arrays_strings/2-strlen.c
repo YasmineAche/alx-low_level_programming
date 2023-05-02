@@ -4,7 +4,7 @@
   *
   * @s : pointer to the variable
   *
-  * Return : len
+  * Return: len
   */
 int _strlen(char *s)
 {
