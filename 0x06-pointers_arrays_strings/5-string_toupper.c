@@ -4,15 +4,19 @@
   *
   * @c : variable
   *
-  * return: char
+  * Return: char
   */
 char *string_toupper(char *c)
 {
-	int i = 0;
+	char *p = c;
 
-	while (*c != '\0')
+	while (*p != '\0')
 	{
-		c[i] = c[i] - 32;
+		if (*p >= 97 && *p <= 122)
+		{
+			*p = *p - 32;
+		}
+		p++;
 	}
 	return (c);
 }
