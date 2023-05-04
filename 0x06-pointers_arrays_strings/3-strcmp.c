@@ -35,9 +35,9 @@ int _strcmp(char *s1, char *s2)
 		}
 		else if (s1[i] == s2[i] && *s1 == *s2)
 		{
-			return (0);
+			break;
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
