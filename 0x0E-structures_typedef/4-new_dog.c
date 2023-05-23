@@ -20,43 +20,24 @@ int _strlen(char *s)
 	return (len);
 }
 /**
-  * _strncpy - concatenates two strings
+  * _strcpy - concatenates two strings
   * @dest : pointer to the variable
   * @src : pointer to the variable
-  * @n : pointer to the variable
   * Return: char
   */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int len_src = 0, i, len_dest = 0;
+	int len = 0, i;
 
-	while (*src != '\0')
+	while (src[len] != '\0')
 	{
-		len_src++;
-		src++;
+		len++;
 	}
-	while (*dest != '\0')
+	for (i = 0; i < len; i++)
 	{
-		len_dest++;
-		dest++;
+		dest[i] = src[i];
 	}
-	src -= len_src;
-	dest -= len_dest;
-	for (i = 0; i < n; i++)
-	{
-		if (dest[i] == '\0')
-		{
-			break;
-		}
-		else if (src[i] != '\0' && len_src >= i)
-		{
-			dest[i] = src[i];
-		}
-		else
-		{
-			dest[i] = '\0';
-		}
-	}
+	dest[i] = '\0';
 	return (dest);
 }
 /**
@@ -91,8 +72,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog->name);
 		return (NULL);
 	}
-	_strncpy(new_dog->name, name, name_length);
-	_strncpy(new_dog->owner, owner, owner_length);
+	_strcpy(new_dog->name, name);
+	_strcpy(new_dog->owner, owner);
 	new_dog->age = age;
 	return (new_dog);
 }
