@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 /**
   * free_listint_safe - fonction
@@ -10,30 +9,31 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	listint_t *current, *temp;
+	listint_t *temp;
+	int diff;
 
-	if (h == NULL)
+	if (!h || !*h)
 	{
 		return (0);
 	}
-	current = *h;
-	while (current != NULL)
+	while (h != NULL)
 	{
-		count++;
-		if (current->next >= current)
+		diff = *h - (*h)->next;
+		if (diff > 0)
 		{
-			temp = current->next;
-			free(current);
-			current = NULL;
-			*h = NULL;
-			break;
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+			count++;
 		}
 		else
 		{
-			temp = current;
-			current = current->next;
-			free(temp);
+			free(*h);
+			*h = NULL;
+			count++;
+			break;
 		}
 	}
+	*h = NULL;
 	return (count);
 }
